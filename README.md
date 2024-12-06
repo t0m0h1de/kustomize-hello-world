@@ -1,4 +1,4 @@
-# kustomize tryal
+# kustomize trial
 
 ## 使用方法
 
