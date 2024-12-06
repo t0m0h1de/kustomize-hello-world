@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kustomize-hello-world
+  label:
+    app: kustomize-hello-world
+spec:
+  selector:  
+    matchLabels:
+      deployment: kustomize-hello-world
+  template:
+    metadata:
+      labels:
+        deployment: kustomize-hello-world
+    spec:
+      containers:
+        - name: kustomize-hello-world
+          image: ghcr.io/t0m0h1de/helm-hello-world/helm-hello-world
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080

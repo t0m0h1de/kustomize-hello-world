@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kustomize-hello-world
+spec:
+  selector:
+    deployment: kustomize-hello-world
+  ports:
+    - port: 8080
+      targetPort: 8080

@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:
+  app: kustmize-hello-world
+resources:
+  - deployment.yaml
+  - service.yaml
+configMapGenerator:
+  - name: kustomize-hello-world
+    literals:
+      - TEST_KEY=value_test
