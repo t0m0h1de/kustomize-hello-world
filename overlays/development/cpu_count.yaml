@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kustomize-hello-world
+spec:
+  template:
+    spec:
+      containers:
+        - name: kustomize-hello-world
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"

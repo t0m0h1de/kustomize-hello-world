@@ -2,10 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kustomize-hello-world
-  label:
+  labels:
     app: kustomize-hello-world
 spec:
-  selector:  
+  selector:
     matchLabels:
       deployment: kustomize-hello-world
   template:
