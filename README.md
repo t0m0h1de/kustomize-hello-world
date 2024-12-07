@@ -3,5 +3,5 @@
 ## 使用方法
 
 ```
-oc kustomize ./ | oc apply -f -
+oc kustomize ./base | oc apply -f -
 ```
